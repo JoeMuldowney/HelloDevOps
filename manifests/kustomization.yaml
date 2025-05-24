@@ -1,3 +1,0 @@
-resources:
-  - ../k8/deployment.yaml
-  - ../k8/service.yaml
