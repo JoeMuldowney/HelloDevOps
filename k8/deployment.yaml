@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-pipeline-deployment
+  namespace: devops
 spec:
   replicas: 2
   selector:
@@ -13,7 +14,7 @@ spec:
         app: hello-devops
     spec:
       containers:
-      - name: HelloDevOps
+      - name: hellodevops
         image: JoeMuldowney/HelloDevOps:latest
         ports:
         - containerPort: 5000
