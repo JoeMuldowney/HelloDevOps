@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: DevOps-Pipeline-Deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: HelloDevOps
+  template:
+    metadata:
+      labels:
+        app: HelloDevOps
+    spec:
+      containers:
+      - name: HelloDevOps
+        image: JoeMuldowney/HelloDevOps:latest
+        ports:
+        - containerPort: 5000
