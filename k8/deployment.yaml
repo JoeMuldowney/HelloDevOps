@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: hellodevops
-        image: JoeMuldowney/hellodevops:latest
+        image: joemuldowney/hellodevops:latest
         ports:
         - containerPort: 5000
