@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-pipeline-deployment
+  name: devops-pipeline-deployment-feature
   namespace: devops
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: hello-devops
+      app: hello-devops-app2
   template:
     metadata:
       labels:
-        app: hello-devops
+        app: hello-devops-app2
     spec:
+      nodeSelector:
+        branch: app2
       containers:
-      - name: hellodevops
-        image: joemuldowney/hellodevops:latest
+      - name: hellodevopsapp2
+        image: joemuldowney/hellodevopsapp2:feature
         ports:
         - containerPort: 5000
