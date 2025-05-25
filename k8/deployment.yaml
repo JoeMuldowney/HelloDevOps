@@ -17,6 +17,6 @@ spec:
         branch: app2
       containers:
       - name: hellodevopsapp2
-        image: joemuldowney/hellodevopsapp2:feature
+        image: joemuldowney/hellodevopsapp2
         ports:
         - containerPort: 5000
